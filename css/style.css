@@ -1,0 +1,114 @@
+html { 
+    background-image: url('../img/wood_pattern.png');
+    font-family: sans-serif;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: slide-up 1s ease;
+    font-size: 74px;
+    color: #c12427;
+    text-shadow: 0 1px 0  white, 
+    0 3px 0  white, 
+    0 20px 20px rgba(0,0,0,.15)
+
+}
+
+.card-container {
+    display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding-bottom: 30px;
+    
+}
+
+.card {
+    width:100%;
+	max-width: 30%;
+	margin:5px;
+    width: 180px; 
+    height: 250px;
+    perspective: 470px;
+    border-radius: 3px;
+    animation: slide-up 0.5s ease;
+    
+  }
+
+  .card-img{
+    width:100%;
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%; height: auto;
+    transition: transform 2s;
+    backface-visibility:hidden;
+    box-shadow: 5px 5px 5px grey;
+  }
+
+
+
+  .front { 
+    border-radius: 9px;
+    background-color:#c12427;
+
+  }
+  .back { 
+    background-color:#c12427;
+    border-radius: 9px;
+    transform: rotateY(180deg); 
+  }
+
+
+  .flip-card-front {
+    transform: rotateY(180deg); 
+  }
+
+  .flip-card-back {
+    transform: rotateY(360deg); 
+  }
+
+
+.deal-cards-btn {
+	background-color:#c12427;
+	-moz-border-radius:38px;
+	-webkit-border-radius:38px;
+	border-radius:38px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size:17px;
+	padding:16px 31px;
+    text-decoration:none;
+    box-shadow: 0 1px 0  white, 
+    0 3px 0  white, 
+    0 20px 20px rgba(0,0,0,.15);
+    animation: slide-up 1s ease;
+}
+
+
+
+.card-control-panel {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+  @keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
